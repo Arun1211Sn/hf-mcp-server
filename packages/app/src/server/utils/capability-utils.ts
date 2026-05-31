@@ -49,6 +49,7 @@ export function registerCapabilities(
 			? {
 					resources: {
 						listChanged: false,
+						subscribe: false,
 					},
 				}
 			: {}),
