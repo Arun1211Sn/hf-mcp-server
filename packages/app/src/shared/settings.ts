@@ -48,6 +48,20 @@ export const DEFAULT_SPACE_TOOLS: SpaceTool[] = [
 		subdomain: 'alexnasa-ltx-2-turbo',
 		emoji: '🎥',
 	},
+	{
+		// gr4 — Wan2.2 14B: higher-quality image-to-video alternative engine
+		_id: 'r3gm-wan2-2-fp8da-aoti-preview',
+		name: 'r3gm/wan2-2-fp8da-aoti-preview',
+		subdomain: 'r3gm-wan2-2-fp8da-aoti-preview',
+		emoji: '🌀',
+	},
+	{
+		// gr5 — Chatterbox multilingual TTS for narration
+		_id: 'resembleai-chatterbox-multilingual-tts',
+		name: 'ResembleAI/Chatterbox-Multilingual-TTS',
+		subdomain: 'resembleai-chatterbox-multilingual-tts',
+		emoji: '🗣️',
+	},
 
 	// Add more always-on Spaces here, e.g.:
 	// { _id: 'evalstate-flux1-schnell', name: 'evalstate/flux1_schnell', subdomain: 'evalstate-flux1-schnell', emoji: '🏎️💨' },
