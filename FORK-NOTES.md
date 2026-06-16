@@ -39,12 +39,16 @@ cp .env.example .env   # then paste your HF token
 ./run-stdio.sh         # stdio server for Claude Code
 ```
 
-## Wire into Claude Code
-Project `.mcp.json` (in the parent dir) points `hf-fork` at `run-stdio.sh`, or add
-user-scoped:
+## Wire into Claude Code (system-wide, like the atlassian MCP)
+Registered at **user scope** so it's available in every project (top-level `mcpServers`
+in `~/.claude.json`), mirroring how the Atlassian MCP is set up — a stdio server Claude
+Code launches on demand:
 ```bash
 claude mcp add hf-fork --scope user -- /home/arun/Documents/MCPs/hf-mcp-server/run-stdio.sh
+claude mcp list   # hf-fork: ... ✔ Connected
 ```
+Note: stdio servers are launched by the client per session, so there's no boot daemon to
+manage — user-scope registration is what makes it "always available".
 
 ## Staying current with upstream
 ```bash
